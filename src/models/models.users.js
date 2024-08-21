@@ -2,6 +2,7 @@ import { Model } from 'sequelize';
 export default async (sequelize, DataTypes) => {
     class Users extends Model {
         static associate(models) {
+            Users.hasMany(models.Vinay, { foreignKey: 'id' });
         }
     };
     Users.init({

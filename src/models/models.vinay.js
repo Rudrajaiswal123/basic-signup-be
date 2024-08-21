@@ -2,6 +2,7 @@ import { Model } from 'sequelize';
 export default async (sequelize, DataTypes) => {
     class Vinay extends Model {
         static associate(models) {
+            Vinay.belongsTo(models.Users, { foreignKey: 'id' });
         }
     };
     Vinay.init({
