@@ -2,7 +2,7 @@ import { Model } from 'sequelize';
 export default async (sequelize, DataTypes) => {
     class Users extends Model {
         static associate(models) {
-            Users.hasMany(models.Vinay, { foreignKey: 'id' });
+            Users.hasMany(models.Vinay, { foreignKey: 'user_id',onDelete: 'CASCADE', },);
         }
     };
     Users.init({
