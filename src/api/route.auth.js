@@ -26,6 +26,16 @@ authRoute.delete(
     controller.deleteUsers
 );
 
+authRoute.post(
+    '/vinay',
+    controller.postVinay
+);
+
+authRoute.get(
+    '/vinay',
+    controller.getVinay
+);
+
 
 
 export default authRoute;
